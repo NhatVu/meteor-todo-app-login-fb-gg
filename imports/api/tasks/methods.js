@@ -5,8 +5,6 @@ import { Tasks } from './tasks.js';
 Meteor.methods({
   'tasks.insert'(text){
     check(text, String);
-    text = parseInt(text);
-    console.log(text, 'type of text: ', typeof text);
     if(!this.userId)
       throw new Meteor.Error('not-authorized');
     const insertObject = {
@@ -15,8 +13,6 @@ Meteor.methods({
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).profile.name,
     }
-    console.log('=== aaa ===')
-    console.log(insertObject)
     Tasks.insert(insertObject, {
       autoConvert: false,
     });
