@@ -35,7 +35,7 @@ class App extends React.Component {
     showUserNav() {
         if (this.props.user) {
             // if user logged in this.props.user.emails[0].address ||
-            const username =  this.props.user.profile.name;
+            const username =  this.props.user.initials.name;
             return (
                 <ul className="nav navbar-nav navbar-right">
                     <li className="dropdown">
