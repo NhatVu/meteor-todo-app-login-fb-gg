@@ -3,9 +3,9 @@ import {Meteor} from 'meteor/meteor';
 import {createContainer} from 'meteor/react-meteor-data';
 import {Tasks} from '../../api/tasks/tasks.js';
 
-import PostTask from './PostTask';
-import Task from './Task.jsx';
-import AppHeader from './AppHeader.jsx'
+import PostTask from '../components/PostTask';
+import Task from '../components/Task.jsx';
+import AppHeader from '../components/AppHeader.jsx'
 
 class App extends React.Component {
     constructor() {

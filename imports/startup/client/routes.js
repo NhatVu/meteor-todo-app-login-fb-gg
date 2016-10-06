@@ -4,9 +4,10 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Meteor } from 'meteor/meteor';
 
 
-import App from '../../ui/components/App.jsx';
-import Login from '../../ui/components/Login.jsx';
-import Register from '../../ui/components/Register.jsx';
+import App from '../../ui/pages/App.jsx';
+import Login from '../../ui/pages/Login.jsx';
+import Register from '../../ui/pages/Register.jsx';
+import TimeCounting from '../../ui/pages/TimeCounting.jsx';
 
 FlowRouter.route('/', {
   action(){
@@ -36,5 +37,11 @@ FlowRouter.route('/logout', {
           sAlert.info("You've been signed out. ", {effect: 'stackslide', position: 'top-right', timeout: 2000,});
         }
     })
+  }
+})
+
+FlowRouter.route('/counting', {
+  action(){
+    mount(TimeCounting);
   }
 })

@@ -1,5 +1,5 @@
 import React from 'react';
-import EmailPasswordForm from './EmailPasswordForm.jsx';
+import EmailPasswordForm from '../components/EmailPasswordForm.jsx';
 import {Accounts} from 'meteor/accounts-base';
 
 export default class Register extends React.Component {

@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import '../imports/api/tasks/index.js';
 import { Accounts } from 'meteor/accounts-base'
 import '../imports/api/users/index.js';
+import '../imports/api/exams/index.js';
 // import '../imports/startup/server/accounts-config.js'
 Meteor.startup(() => {
     // code to run on server at startup
